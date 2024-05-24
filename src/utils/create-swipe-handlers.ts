@@ -1,4 +1,5 @@
 import { calculateAngle, calculateDistance } from './calculations'
+import { createSwipeHandlersConfig } from './create-swipe-handlers-config'
 import { defaultSwipeHandlerConfig } from '../constants'
 import { SwipeHandlersConfig } from '../types/swipe-handlers-config'
 import { SwipeEventPosition } from '../types/swipe-event-position'
@@ -9,7 +10,7 @@ import { deepMerge } from '@oleksii-pavlov/deep-merge'
 
 export function createSwipeHandlers(config: SwipeHandlersConfig): SwipeEventHandlers {
   // normalize config
-  const normalizedConfig = deepMerge(defaultSwipeHandlerConfig, config)
+  const normalizedConfig = createSwipeHandlersConfig(deepMerge(defaultSwipeHandlerConfig, config))
 
   let swipeEvent: SwipeEvent = createSwipeEvent()
   let swipeEventInitialPosition: SwipeEventPosition = {

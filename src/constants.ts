@@ -1,4 +1,3 @@
-import { SwipeHandlersConfigCreator } from './types/swipe-handlers-config-creator'
 import { SwipeEventDirections } from './types/swipe-event-directions'
 import { SwipeHandlersConfig } from './types/swipe-handlers-config'
 
@@ -17,15 +16,12 @@ export const DIRECTIONS_TO_DEGREES_MAP: Record<SwipeEventDirections, number> = {
 
 export const emptyFunction = () => {}
 
-export const defaultSwipeHandlerConfig: SwipeHandlersConfig = {
-  onSwipe: emptyFunction,
-  onSwiping: emptyFunction,
+export const defaultSwipeHandlerConfig: Required<SwipeHandlersConfig> = {
   minSwipeDistance: 50,
   minSwipingDistance: 30,
-}
 
-export const defaultSwipeHandlerConfigCreator: SwipeHandlersConfigCreator = {
-  ...defaultSwipeHandlerConfig,
+  onSwipe: emptyFunction,
+  onSwiping: emptyFunction,
 
   onSwipeTop: emptyFunction,
   onSwipeRight: emptyFunction,
