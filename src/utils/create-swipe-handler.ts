@@ -34,6 +34,9 @@ export function createSwipeHandler(config: SwipeHandlerConfig): SwipeEventHandle
     swipeEvent.distance = calculateDistance(swipeEvent)
     swipeEvent.target = touch.target
 
+    // validate event by config
+    if (swipeEvent.distance < normalizedConfig.minSwipingDistance) return
+
     // call listener
     normalizedConfig.onSwiping(swipeEvent)
   }
@@ -48,6 +51,9 @@ export function createSwipeHandler(config: SwipeHandlerConfig): SwipeEventHandle
     swipeEvent.angle = calculateAngle(swipeEvent)
     swipeEvent.distance = calculateDistance(swipeEvent)
     swipeEvent.target = touch.target
+
+    // validate event by config
+    if (swipeEvent.distance < normalizedConfig.minSwipeDistance) return
 
     // call listener
     normalizedConfig.onSwipe(swipeEvent)
