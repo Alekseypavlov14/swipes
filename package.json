@@ -4,7 +4,7 @@
   "description": "Swipe event handlers",
   "main": "./build/index.js",
   "scripts": {
-    "prepublishOnly": "npm run test && npm run build",
+    "prepublishOnly": "npm run build",
     "build": "tsc",
     "dev": "tsc --watch"
   },
