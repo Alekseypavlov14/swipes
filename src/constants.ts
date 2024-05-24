@@ -1,3 +1,4 @@
+import { SwipeHandlerConfigCreator } from './types/swipe-handler-config-creator'
 import { SwipeEventDirection } from './types/swipe-event-direction'
 import { SwipeHandlerConfig } from './types/swipe-handler-config'
 
@@ -18,5 +19,33 @@ export const emptyFunction = () => {}
 
 export const defaultSwipeHandlerConfig: SwipeHandlerConfig = {
   onSwipe: emptyFunction,
-  onSwiping: emptyFunction
+  onSwiping: emptyFunction,
+  minSwipeDistance: 50,
+  minSwipingDistance: 30,
 }
+
+export const defaultSwipeHandlerConfigCreator: SwipeHandlerConfigCreator = {
+  ...defaultSwipeHandlerConfig,
+
+  onSwipeTop: emptyFunction,
+  onSwipeRight: emptyFunction,
+  onSwipeBottom: emptyFunction,
+  onSwipeLeft: emptyFunction,
+
+  onSwipeTopRight: emptyFunction,
+  onSwipeBottomRight: emptyFunction,
+  onSwipeBottomLeft: emptyFunction,
+  onSwipeTopLeft: emptyFunction,
+
+  onSwipingTop: emptyFunction,
+  onSwipingRight: emptyFunction,
+  onSwipingBottom: emptyFunction,
+  onSwipingLeft: emptyFunction,
+  
+  onSwipingTopRight: emptyFunction,
+  onSwipingBottomRight: emptyFunction,
+  onSwipingBottomLeft: emptyFunction,
+  onSwipingTopLeft: emptyFunction,
+}
+
+export const directionAnglesDifference = 30
