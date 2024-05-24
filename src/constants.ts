@@ -1,30 +1,30 @@
-import { SwipeHandlerConfigCreator } from './types/swipe-handler-config-creator'
-import { SwipeEventDirection } from './types/swipe-event-direction'
-import { SwipeHandlerConfig } from './types/swipe-handler-config'
+import { SwipeHandlersConfigCreator } from './types/swipe-handlers-config-creator'
+import { SwipeEventDirections } from './types/swipe-event-directions'
+import { SwipeHandlersConfig } from './types/swipe-handlers-config'
 
 export const PI_IN_DEGREES = 180
 
-export const DIRECTIONS_TO_DEGREES_MAP: Record<SwipeEventDirection, number> = {
-  [SwipeEventDirection.top]: 0,
-  [SwipeEventDirection.topRight]: 45,
-  [SwipeEventDirection.right]: 90,
-  [SwipeEventDirection.bottomRight]: 135,
-  [SwipeEventDirection.bottom]: 180,
-  [SwipeEventDirection.bottomLeft]: 225,
-  [SwipeEventDirection.left]: 270,
-  [SwipeEventDirection.topLeft]: 315
+export const DIRECTIONS_TO_DEGREES_MAP: Record<SwipeEventDirections, number> = {
+  [SwipeEventDirections.top]: 0,
+  [SwipeEventDirections.topRight]: 45,
+  [SwipeEventDirections.right]: 90,
+  [SwipeEventDirections.bottomRight]: 135,
+  [SwipeEventDirections.bottom]: 180,
+  [SwipeEventDirections.bottomLeft]: 225,
+  [SwipeEventDirections.left]: 270,
+  [SwipeEventDirections.topLeft]: 315
 }
 
 export const emptyFunction = () => {}
 
-export const defaultSwipeHandlerConfig: SwipeHandlerConfig = {
+export const defaultSwipeHandlerConfig: SwipeHandlersConfig = {
   onSwipe: emptyFunction,
   onSwiping: emptyFunction,
   minSwipeDistance: 50,
   minSwipingDistance: 30,
 }
 
-export const defaultSwipeHandlerConfigCreator: SwipeHandlerConfigCreator = {
+export const defaultSwipeHandlerConfigCreator: SwipeHandlersConfigCreator = {
   ...defaultSwipeHandlerConfig,
 
   onSwipeTop: emptyFunction,

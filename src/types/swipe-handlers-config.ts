@@ -1,6 +1,6 @@
 import { SwipeHandlerCallback } from './swipe-handler-callback'
 
-export interface SwipeHandlerConfig {
+export interface SwipeHandlersConfig {
   onSwipe?: SwipeHandlerCallback
   onSwiping?: SwipeHandlerCallback
   minSwipeDistance?: number

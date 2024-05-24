@@ -1,7 +1,7 @@
 import { SwipeHandlerCallback } from './swipe-handler-callback'
-import { SwipeHandlerConfig } from './swipe-handler-config'
+import { SwipeHandlersConfig } from './swipe-handlers-config'
 
-export interface SwipeHandlerConfigCreator extends SwipeHandlerConfig {
+export interface SwipeHandlersConfigCreator extends SwipeHandlersConfig {
   onSwipeTop?: SwipeHandlerCallback
   onSwipeRight?: SwipeHandlerCallback
   onSwipeBottom?: SwipeHandlerCallback

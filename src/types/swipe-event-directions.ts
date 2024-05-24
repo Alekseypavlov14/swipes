@@ -1,4 +1,4 @@
-export enum SwipeEventDirection {
+export enum SwipeEventDirections {
   'top' = 'top',
   'topRight' = 'topRight',
   'right' = 'right',

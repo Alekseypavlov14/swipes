@@ -1,6 +1,6 @@
 // main utils
-export { createSwipeHandler } from './utils/create-swipe-handler'
-export { createSwipeHandlerConfig } from './utils/create-swipe-handler-config'
+export { createSwipeHandlers } from './utils/create-swipe-handlers'
+export { createSwipeHandlersConfig } from './utils/create-swipe-handlers-config'
 
 // helping utils (for vanilla js)
 export { registerSwipeHandlers } from './utils/register-swipe-handlers'
@@ -13,10 +13,10 @@ export { combineCallbacks } from './utils/combine-callbacks'
 export { createSwipeEvent } from './utils/create-swipe-event'
 
 // types
-export { SwipeEventDirection } from './types/swipe-event-direction'
+export { SwipeEventDirections } from './types/swipe-event-directions'
 export { SwipeEventHandlers } from './types/swipe-event-handlers'
 export { SwipeEventPosition } from './types/swipe-event-position'
 export { SwipeEvent } from './types/swipe-event'
-export { SwipeHandlerConfigCreator } from './types/swipe-handler-config-creator'
+export { SwipeHandlersConfigCreator } from './types/swipe-handlers-config-creator'
 export { SwipeHandlerCallback } from './types/swipe-handler-callback'
-export { SwipeHandlerConfig } from './types/swipe-handler-config'
+export { SwipeHandlersConfig } from './types/swipe-handlers-config'

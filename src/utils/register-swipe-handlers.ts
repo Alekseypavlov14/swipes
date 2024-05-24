@@ -1,7 +1,7 @@
-import { SwipeHandlerConfig } from '../types/swipe-handler-config'
+import { createSwipeHandlers } from './create-swipe-handlers'
+import { SwipeHandlersConfig } from '../types/swipe-handlers-config'
 import { applySwipeHandlers } from './apply-swipe-handlers'
-import { createSwipeHandler } from './create-swipe-handler'
 
-export function registerSwipeHandlers(selector: string, config: SwipeHandlerConfig) {
-  return applySwipeHandlers(selector, createSwipeHandler(config))
+export function registerSwipeHandlers(selector: string, config: SwipeHandlersConfig) {
+  return applySwipeHandlers(selector, createSwipeHandlers(config))
 }

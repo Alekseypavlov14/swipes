@@ -1,12 +1,12 @@
-import { DIRECTIONS_TO_DEGREES_MAP, defaultSwipeHandlerConfigCreator, directionAnglesDifference } from '../constants'
+import { DIRECTIONS_TO_DEGREES_MAP, defaultSwipeHandlerConfigCreator } from '../constants'
 import { createAnglesRange, createSwipeDirectionCallback } from './create-swipe-direction-callback'
-import { SwipeHandlerConfigCreator } from '../types/swipe-handler-config-creator'
-import { SwipeHandlerConfig } from '../types/swipe-handler-config'
+import { SwipeHandlersConfigCreator } from '../types/swipe-handlers-config-creator'
+import { SwipeHandlersConfig } from '../types/swipe-handlers-config'
 import { combineCallbacks } from './combine-callbacks'
 import { SwipeEvent } from '../types/swipe-event'
 import { deepMerge } from '@oleksii-pavlov/deep-merge'
 
-export function createSwipeHandlerConfig(config: SwipeHandlerConfigCreator): SwipeHandlerConfig {
+export function createSwipeHandlersConfig(config: SwipeHandlersConfigCreator): SwipeHandlersConfig {
   const normalizedConfigCreator = deepMerge(defaultSwipeHandlerConfigCreator, config)
 
   function onSwipe(event: SwipeEvent) {
