@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@oleksii-pavlov/deep-merge": "^1.2.3",
-    "@oleksii-pavlov/ranges": "^1.0.0"
+    "@oleksii-pavlov/ranges": "^1.0.0",
+    "@oleksii-pavlov/templates": "^1.0.8"
   }
 }
