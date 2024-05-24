@@ -1,11 +1,16 @@
 import { calculateAngle, calculateDistance } from './calculations'
+import { defaultSwipeHandlerConfig } from '../constants'
 import { SwipeHandlerConfig } from '../types/swipe-handler-config'
 import { SwipeEventPosition } from '../types/swipe-event-position'
 import { SwipeEventHandlers } from '../types/swipe-event-handlers'
 import { createSwipeEvent } from './create-swipe-event'
 import { SwipeEvent } from '../types/swipe-event'
+import { deepMerge } from '@oleksii-pavlov/deep-merge'
 
 export function createSwipeHandler(config: SwipeHandlerConfig): SwipeEventHandlers {
+  // normalize config
+  const normalizedConfig = deepMerge(defaultSwipeHandlerConfig, config)
+
   let swipeEvent: SwipeEvent = createSwipeEvent()
   let swipeEventInitialPosition: SwipeEventPosition = {
     x0: 0,
@@ -30,7 +35,7 @@ export function createSwipeHandler(config: SwipeHandlerConfig): SwipeEventHandle
     swipeEvent.target = touch.target
 
     // call listener
-    config.onSwiping(swipeEvent)
+    normalizedConfig.onSwiping(swipeEvent)
   }
   function touchEndHandler(e: TouchEvent) {
     const touch = e.touches[0]
@@ -45,7 +50,7 @@ export function createSwipeHandler(config: SwipeHandlerConfig): SwipeEventHandle
     swipeEvent.target = touch.target
 
     // call listener
-    config.onSwipe(swipeEvent)
+    normalizedConfig.onSwipe(swipeEvent)
   }
 
   return ({

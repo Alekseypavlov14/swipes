@@ -1,4 +1,5 @@
 import { SwipeEventDirection } from './types/swipe-event-direction'
+import { SwipeHandlerConfig } from './types/swipe-handler-config'
 
 export const PI_IN_DEGREES = 180
 
@@ -11,4 +12,11 @@ export const DIRECTIONS_TO_DEGREES_MAP: Record<SwipeEventDirection, number> = {
   [SwipeEventDirection.bottomLeft]: 225,
   [SwipeEventDirection.left]: 270,
   [SwipeEventDirection.topLeft]: 315
+}
+
+export const emptyFunction = () => {}
+
+export const defaultSwipeHandlerConfig: SwipeHandlerConfig = {
+  onSwipe: emptyFunction,
+  onSwiping: emptyFunction
 }

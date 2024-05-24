@@ -1,4 +1,3 @@
-import { SwipeEventDirection } from './swipe-event-direction'
 import { Nullable } from './nullable'
 
 export interface SwipeEvent {
