@@ -1,0 +1,24 @@
+{
+  "name": "@oleksii-pavlov/swipes",
+  "version": "1.0.0",
+  "description": "Swipe event handlers",
+  "main": "./build/index.js",
+  "scripts": {
+    "prepublishOnly": "npm run test && npm run build",
+    "test": "jest ./src/tests --watchAll",
+    "build": "tsc"
+  },
+  "keywords": [
+    "swipes",
+    "handler"
+  ],
+  "author": "Oleksii Pavlov <aleshapavlov9@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.7",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.5"
+  }
+}
