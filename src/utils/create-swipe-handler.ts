@@ -18,12 +18,12 @@ export function createSwipeHandler(config: SwipeHandlerConfig): SwipeEventHandle
   }
 
   function touchStartHandler(e: TouchEvent) {
-    swipeEventInitialPosition.x0 = e.touches[0].clientX
-    swipeEventInitialPosition.y0 = e.touches[0].clientY
+    swipeEventInitialPosition.x0 = e.changedTouches[0].clientX
+    swipeEventInitialPosition.y0 = e.changedTouches[0].clientY
   }
 
   function touchMoveHandler(e: TouchEvent) {
-    const touch = e.touches[0]
+    const touch = e.changedTouches[0]
 
     // update position
     swipeEvent.dx = touch.clientX - swipeEventInitialPosition.x0
@@ -38,7 +38,7 @@ export function createSwipeHandler(config: SwipeHandlerConfig): SwipeEventHandle
     normalizedConfig.onSwiping(swipeEvent)
   }
   function touchEndHandler(e: TouchEvent) {
-    const touch = e.touches[0]
+    const touch = e.changedTouches[0]
 
     // update position
     swipeEvent.dx = touch.clientX - swipeEventInitialPosition.x0

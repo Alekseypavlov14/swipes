@@ -17,7 +17,7 @@ export function calculateAngle(swipeEvent: SwipeEvent): number {
     if (absDX > 0) return DIRECTIONS_TO_DEGREES_MAP.right
   }
 
-  const basicAngle = Math.atan(absDY / absDX)
+  const basicAngle = mapRadianToDegrees(Math.atan(absDY / absDX))
   let resultAngle = 0
 
   // get real angle
