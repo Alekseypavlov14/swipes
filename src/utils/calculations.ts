@@ -40,5 +40,3 @@ export function mapRadianToDegrees(radianAngle: number) {
 export function calculateDistance(swipeEvent: SwipeEvent): number {
   return Math.sqrt(swipeEvent.dx ** 2 + swipeEvent.dy ** 2)
 }
-
-export function getDirectionByAngle() {}
