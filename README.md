@@ -56,6 +56,9 @@ Adds given event listeners **handlers** and applies it to the elements queried b
 Creates [SwipeEventHandlers](#swipeeventhandlers) that can be applied later. 
 **Use this function in non-vanilla js projects.** Add created event listeners to the target element and swipes will be handled. These event listeners use standard Browser API so they can be used with frameworks.
 
+#### addSwipeHandlers(element: HTMLElement, config: [SwipeHandlersConfig](#swipehandlersconfig))
+Adds swipe event handlers to the HTML element. Works very similar to [registerSwipeHandlers](#registerswipehandlersselector-string-config-swipehandlersconfig) but takes an element as argument instead of selector.
+
 ### **Types:**
 #### SwipeHandlersConfig:
 ```ts

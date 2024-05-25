@@ -2,6 +2,7 @@
 export { createSwipeHandlers } from './utils/create-swipe-handlers'
 export { registerSwipeHandlers } from './utils/register-swipe-handlers'
 export { applySwipeHandlers } from './utils/apply-swipe-handlers'
+export { addSwipeHandlers } from './utils/add-swipe-handlers'
 
 // types
 export { SwipeEventHandlers } from './types/swipe-event-handlers'

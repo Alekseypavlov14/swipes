@@ -17,8 +17,8 @@ export const DIRECTIONS_TO_DEGREES_MAP: Record<SwipeEventDirections, number> = {
 export const emptyFunction = () => {}
 
 export const defaultSwipeHandlerConfig: Required<SwipeHandlersConfig> = {
-  minSwipeDistance: 50,
-  minSwipingDistance: 30,
+  minSwipeDistance: 10,
+  minSwipingDistance: 10,
 
   onSwipe: emptyFunction,
   onSwiping: emptyFunction,
